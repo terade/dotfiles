@@ -1,0 +1,33 @@
+Config { font = "xft:Open Sans:size=9,WenQuanYi Zen Hei:size=11"
+       --, bgColor = "#002B36"
+       --, bgColor = "#330066"
+       , bgColor = "#000000"
+       , fgColor = "grey"
+       , position = Bottom
+       , lowerOnStart = True
+       --, pickBroadest = True
+       , allDesktops = True 
+       , alpha = 175   -- transparency
+       , commands = [ Run Cpu ["-L","3","-H","50","--normal","green","--high","red"] 10
+                    , Run Memory ["-t","Mem: <usedratio>%"] 10
+		    , Run Battery [
+		    "-t", "<acstatus>: <left>% - <timeleft>",
+		    "--",
+		    --"-c", "charge_full",
+		    "-O", "AC",
+		    "-o", "Bat",
+		    "-h", "green",
+		    "-l", "red"
+		    ] 10
+                    , Run Date "%a %b %_d %H:%M" "date" 10
+                    --, Run Com "nui" ["r", "-s"] "nui" 10
+                    , Run StdinReader
+                    ]
+       , sepChar = "%"
+       , alignSep = "}{"
+       --, template = "%StdinReader% }{ %nui% | %cpu% | %memory% | %battery% | <fc=#ee9a00>%date%</fc>"
+       , template = "%StdinReader% }{ %cpu% | %memory% | %battery% | <fc=#ee9a00>%date%</fc>"
+       }
+
+--"xft:Terminus-9"
+--"xft:monospace:size=9:antialias=true"
