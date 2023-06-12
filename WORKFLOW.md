@@ -48,6 +48,7 @@ $ tmux ls
 
 ### Shortcuts
 * Prefix + s => show all sessions navigate the sessions with j,k expand with h,l
+* Prefix + w => show all windows navigate the windows with j,k expand with h,l
 * Prefix + $ => rename the current session
 * Prefix + z => zoom in on pane (use again to unzoom)
 * Prefix + : => open tmux prompt
@@ -73,6 +74,10 @@ enable mouse support to for example resize panes
 reload tmux config (here assumed to be located in ~/.tmux.conf)
 ``````
 : source ~/.tmux.conf
+``````
+kill the tmux server (close all sesssions)
+``````
+: kill-server
 ``````
 
 ## Neovim

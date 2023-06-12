@@ -8,3 +8,5 @@ set PATH $PATH ~/.cargo/bin
 
 alias vim="nvim"
 set -x EDITOR nvim
+
+zoxide init fish | source
