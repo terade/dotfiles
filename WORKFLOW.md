@@ -45,11 +45,17 @@ list sessions:
 $ tmux ls
 ``````
 
+kill session named <name>:
+``````
+$ tmux kill-session -t <name>
+``````
 
 ### Shortcuts
 * Prefix + s => show all sessions navigate the sessions with j,k expand with h,l
 * Prefix + w => show all windows navigate the windows with j,k expand with h,l
 * Prefix + $ => rename the current session
+* Prefix + , => rename current window
+* Prefix + & => close current window
 * Prefix + z => zoom in on pane (use again to unzoom)
 * Prefix + : => open tmux prompt
 * Prefix + c => create new window
@@ -58,6 +64,18 @@ $ tmux ls
 * Prefix + <number> => switch to window <number>
 * Prefix + d => dettach from session
 * Prefix + x => kill pane
+
+### Configuration specific
+* Prefix + l => focus right pane
+* Prefix + h => focus left pane
+* Prefix + j => focus lower pane
+* Prefix + k => focus upper pane
+* Prefix + L => expand pane right
+* Prefix + H => expand pane left
+* Prefix + J => expand pane down
+* Prefix + K => expand pane up
+* Prefix + i => vertical split
+* Prefix + u => horizontal split
 
 #### Windows
 can be seen in the status bar on the left side
@@ -79,6 +97,11 @@ kill the tmux server (close all sesssions)
 ``````
 : kill-server
 ``````
+list shortcuts
+``````
+: list-keys
+``````
+
 
 ## Neovim
 ### Visual mode
