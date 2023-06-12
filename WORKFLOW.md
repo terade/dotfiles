@@ -66,14 +66,14 @@ $ tmux kill-session -t <name>
 * Prefix + x => kill pane
 
 ### Configuration specific
-* Prefix + l => focus right pane
 * Prefix + h => focus left pane
 * Prefix + j => focus lower pane
 * Prefix + k => focus upper pane
-* Prefix + L => expand pane right
+* Prefix + l => focus right pane
 * Prefix + H => expand pane left
 * Prefix + J => expand pane down
 * Prefix + K => expand pane up
+* Prefix + L => expand pane right
 * Prefix + i => vertical split
 * Prefix + u => horizontal split
 
