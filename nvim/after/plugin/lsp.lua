@@ -6,6 +6,10 @@ lsp.ensure_installed({
   'rust_analyzer',
 })
 
+lsp.configure('solargraph', {
+  force_setup = true
+})
+
 -- Fix Undefined global 'vim'
 lsp.nvim_workspace()
 

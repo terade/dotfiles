@@ -49,7 +49,10 @@ return require('packer').startup(function(use)
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
     }
-    
+
+    use {'neoclide/coc.nvim', branch = 'release'}
+
+    use {'NoahTheDuke/vim-just'}
 
 end)
 
