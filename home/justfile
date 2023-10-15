@@ -34,4 +34,5 @@ ginit NAME:
     mkdir {{NAME}}
     cd {{NAME}}; go mod init {{NAME}}
     cd {{NAME}}; echo '{{main-go}}' > main.go
+    cd {{NAME}}; go fmt
 

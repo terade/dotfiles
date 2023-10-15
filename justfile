@@ -7,7 +7,7 @@ get_changes:
     cp -r ~/.config/nvim/after nvim/
     cp -r ~/.config/nvim/init.lua nvim/
     cp -r ~/.config/tmux/tmux.conf .
-    cp ~/justfile ./home_justfile
+    cp ~/justfile ./home/justfile
 
 edit:
     vim justfile
