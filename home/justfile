@@ -22,11 +22,11 @@ edit:
 @ginit NAME:
     mkdir {{ NAME }}
     cd {{ NAME }}; go mod init {{ NAME }}
-    cp ~/justdir/main.go {{ NAME }}
+    cp ~/justdir/go/main.go {{ NAME }}
     cd {{ NAME }}; go fmt
 
 [no-cd]
 @cinit NAME:
     mkdir {{ NAME }}
-    cp ~/justdir/main.c {{ NAME }}
-    cp ~/justdir/justfile_c {{ NAME }}/justfile
+    cp ~/justdir/c/main.c {{ NAME }}
+    cp ~/justdir/c/justfile {{ NAME }}
