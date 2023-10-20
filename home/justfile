@@ -1,11 +1,10 @@
-
 set shell := ["fish", "-c"]
 
 tn NAME:
-    tmux new -s {{NAME}}
+    tmux new -s {{ NAME }}
 
 tnew NAME:
-    tmux new -s {{NAME}} -c (find ~ -type d | fzf)
+    tmux new -s {{ NAME }} -c (find ~ -type d | fzf)
 
 tlist:
     tmux list-sessions
@@ -17,22 +16,17 @@ cds:
     cd (find ~ -type d | fzf)
 
 edit:
- vim ~/justfile
-
-main-go := '
-package main
-
-import("fmt")
-
-func main() {
-    fmt.Println("Hello World!")
-}
-'
+    vim ~/justfile
 
 [no-cd]
-ginit NAME:
-    mkdir {{NAME}}
-    cd {{NAME}}; go mod init {{NAME}}
-    cd {{NAME}}; echo '{{main-go}}' > main.go
-    cd {{NAME}}; go fmt
+@ginit NAME:
+    mkdir {{ NAME }}
+    cd {{ NAME }}; go mod init {{ NAME }}
+    cp ~/justdir/main.go {{ NAME }}
+    cd {{ NAME }}; go fmt
 
+[no-cd]
+@cinit NAME:
+    mkdir {{ NAME }}
+    cp ~/justdir/main.c {{ NAME }}
+    cp ~/justdir/justfile_c {{ NAME }}/justfile

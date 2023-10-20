@@ -3,11 +3,7 @@ local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 lsp.ensure_installed({
-    'rust_analyzer', 'gopls'
-})
-
-lsp.configure('solargraph', {
-    force_setup = true
+    'rust_analyzer', 'gopls', 'solargraph'
 })
 
 -- Fix Undefined global 'vim'

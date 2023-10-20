@@ -1,0 +1,20 @@
+set shell := ['fish', '-c']
+
+default: build run
+
+cc := 'gcc'
+shell := 'fish'
+files := '*.c'
+
+build:
+    {{ cc }} {{ files }} -o main.o
+
+run:
+    ./main.o
+
+auto:
+    watchexec -w {{ files }} --shell={{ shell }} just
+
+edit:
+    vim justfile
+
