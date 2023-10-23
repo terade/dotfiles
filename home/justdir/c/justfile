@@ -13,7 +13,7 @@ run:
     ./main.o
 
 auto:
-    watchexec -w {{ files }} --shell={{ shell }} just
+    watchexec -c -w {{ files }} --shell={{ shell }} just
 
 edit:
     vim justfile

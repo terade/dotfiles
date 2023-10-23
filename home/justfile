@@ -19,14 +19,14 @@ edit:
     vim ~/justfile
 
 [no-cd]
-@ginit NAME:
+@gnew NAME:
     mkdir {{ NAME }}
     cd {{ NAME }}; go mod init {{ NAME }}
     cp ~/justdir/go/main.go {{ NAME }}
     cd {{ NAME }}; go fmt
 
 [no-cd]
-@cinit NAME:
+@cnew NAME:
     mkdir {{ NAME }}
     cp ~/justdir/c/main.c {{ NAME }}
     cp ~/justdir/c/justfile {{ NAME }}
