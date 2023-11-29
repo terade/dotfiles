@@ -18,3 +18,5 @@ auto:
 edit:
     vim justfile
 
+fmt:
+    clang-format *.c -i

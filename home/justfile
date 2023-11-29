@@ -30,3 +30,5 @@ edit:
     mkdir {{ NAME }}
     cp ~/justdir/c/main.c {{ NAME }}
     cp ~/justdir/c/justfile {{ NAME }}
+    cp ~/justdir/c/clang-format {{ NAME }}/.clang-format
+
